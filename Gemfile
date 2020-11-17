@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+gem "bulma-rails", "~> 0.8.0"
 gem 'faraday', '~> 1.1'
 gem 'kaminari', '~> 1.2', '>= 1.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

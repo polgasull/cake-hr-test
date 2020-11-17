@@ -1,5 +1,12 @@
 
+<div class="columns">
+  <div class="column has-text-centered">
+    <%= render @characters %>
+  </div>
+</div>
 
-<%= render @characters %>
-
-<%= paginate @characters %>
+<div class="columns">
+  <div class="column is-4 is-offset-4 has-text-centered">
+    <%= paginate @characters %>  
+  </div>
+</div>

@@ -1,9 +1,24 @@
-
-<div> 
-  <%= character.name %>
-  <%= character.status %>
-  <%= character.image %>
-  <% character.episodes.each do |episode| %>
-    <%= episode.number %>
-  <% end %>
-</div> <br>
+<div class="box">
+  <article class="media">
+    <div class="media-left">
+      <figure class="image is-64x64">
+        <%= image_tag(character.image) %>
+      </figure>
+    </div>
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong><%= character.name %></strong> <small>@<%= character.name %></small>
+          <br>
+          <%= character.status %>
+        </p>
+        <p>
+          Number of episodes: 
+          <% character.episodes.each do |episode| %>
+            <%= episode.number %>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </article>
+</div>
