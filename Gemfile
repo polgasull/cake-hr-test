@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.0'
 
+gem 'faraday', '~> 1.1'
+gem 'kaminari', '~> 1.2', '>= 1.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use postgresql as the database for Active Record
@@ -35,6 +37,7 @@ group :development, :test do
   gem 'factory_bot_rails', '~> 6.1'
   gem 'faker'
   gem 'shoulda-matchers', '~> 4.4', '>= 4.4.1'
+  gem 'pry', '~> 0.13.1'
 end
 
 group :development do
