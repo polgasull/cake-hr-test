@@ -1,0 +1,9 @@
+
+<div> 
+  <%= character.name %>
+  <%= character.status %>
+  <%= character.image %>
+  <% character.episodes.each do |episode| %>
+    <%= episode.number %>
+  <% end %>
+</div> <br>
