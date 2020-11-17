@@ -17,9 +17,9 @@ class CharacterService
       Character.
         find_or_initialize_by(id: record['id']).
         update(name: record['name'], status: record['status'], image: record['image'])   
-      Episode.
-        find_or_initialize_by(id: record['id']).
-        update(number: record['episode'].count, character_id: record['id'])
+      record['episode'].each do |episode|
+        Episode.create(number: episode.split("/").last, character_id: record['id'])
+      end
     end
   end
 end
